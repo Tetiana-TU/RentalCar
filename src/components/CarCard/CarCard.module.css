@@ -1,0 +1,89 @@
+.containerCar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 276px;
+  height: 424px;
+}
+.img {
+  height: 268px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.descWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.desc {
+  display: flex;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+}
+
+.model {
+  color: #3470ff;
+}
+
+.price {
+  margin-left: 87px;
+  padding-right: 12px;
+}
+
+.addressWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.addressLine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8d929a;
+}
+.addressLine span {
+  position: relative;
+  padding-right: 8px;
+}
+
+.addressLine span:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: #8d929a;
+}
+.readMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #3470ff;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.readMore:hover {
+  background-color: #0b44cd;
+}

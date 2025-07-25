@@ -1,24 +1,26 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchContacts } from "./redux/contactsOps";
-import ContactsForm from "./components/ContactForm/ContactForm";
-import ContactList from "./components/ContactList/ContactList";
-import SearchBox from "./components/SearchBox/SearchBox";
+import { Route, Routes } from "react-router-dom";
+import AppBar from "./components/AppBar/AppBar";
+import { Layout } from "./components/Layout/Layout";
+import { HomePage } from "./pages/HomePage";
+import { CatalogPage } from "./pages/CatalogPage";
+import { CarDetailsPage } from "./pages/CarDetailsPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 import "./App.css";
 
 const App = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return (
-    <div className="App">
-      <h1>Contacts Book</h1>
-      <ContactsForm />
-      <SearchBox />
-      <ContactList />
-    </div>
+    <>
+      <AppBar />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<CarDetailsPage />} />
+
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Layout>
+    </>
   );
 };
 

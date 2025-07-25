@@ -1,0 +1,80 @@
+.formFilters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 924px;
+  width: 100%;
+}
+.containerFilters:nth-child(1),
+.containerFilters:nth-child(2),
+.containerFilters:nth-child(4) {
+  margin-right: 16px;
+}
+
+.containerFilters label {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8d929a;
+}
+.containerFilters input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 12px;
+  border: none;
+  padding: 12px 16px;
+  width: 204px;
+  height: auto;
+  background: #f7f7f7;
+}
+.containerFilters input:nth-child(3) {
+  border-right: 1px solid #dadde1;
+  border-radius: 12px 0 0 12px;
+}
+.containerFilters input:nth-child(4) {
+  border-radius: 0 12px 12px 0;
+}
+.containerFilters ::placeholder {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 12px 51px;
+  width: 156px;
+  height: 44px;
+  background: #3470ff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff;
+}
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+.containerFilters .mileageLeft {
+  border-radius: 0 12px 12px 0;
+  width: 160px;
+}
+.containerFilters .mileageRight {
+  border-right: 1px solid #dadde1;
+  border-radius: 12px 0 0 12px;
+  width: 160px;
+}
