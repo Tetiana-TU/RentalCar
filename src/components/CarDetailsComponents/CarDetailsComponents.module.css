@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 0 120px;
+}
+
+.imageForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.carImage {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 19px;
+  object-fit: cover;
+}
+
+.bookingForm {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.bookingForm h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 8px;
+}
+.bookingForm p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #8d929a;
+  margin-bottom: 24px;
+}
+
+.bookingForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.bookingForm input,
+.bookingForm textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.bookingForm button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 51px;
+  width: 156px;
+  height: 44px;
+  padding: 12px;
+  background-color: #2979ff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.carInfo {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.desc {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #101828;
+}
+
+.id {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #8d929a;
+  margin-bottom: 8px;
+}
+
+.location {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #2979ff;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+  margin-bottom: 88px;
+}
+
+.section {
+  margin-bottom: 110px;
+}
+
+.section h4 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section li {
+  margin-bottom: 16px;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: #101828;
+  margin-right: 8px;
+}

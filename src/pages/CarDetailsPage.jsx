@@ -1,9 +1,5 @@
-import Section from "../components/Section/Section";
+import CarDetailsComponents from "../components/CarDetailsComponents/CarDetailsComponents";
 
 export const CarDetailsPage = () => {
-  return (
-    <Section>
-      <h2>Car Details Page</h2>
-    </Section>
-  );
+  return <CarDetailsComponents />;
 };

@@ -27,7 +27,7 @@ export const CarCard = ({ car }) => {
           <span>{car.mileage} km</span>
         </div>
       </div>
-      <Link to={`/cars/${car.id}`} className={css.readMore}>
+      <Link to={`/catalog/${car.id}`} className={css.readMore}>
         Read more
       </Link>
     </div>
