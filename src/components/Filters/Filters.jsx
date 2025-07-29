@@ -1,8 +1,25 @@
 import css from "./Filters.module.css";
 import { Formik, Form, Field } from "formik";
 export default function Filters() {
-  const handleFilter = (values) => {
-    console.log("Пошук по фільтру:", values);
+  const handleFilter = ({ brands = [], onSearch }) => {
+    const dispatch = useDispatch();
+
+    const filters = useSelector((state) => state.filters);
+
+    const prices = Array.from({ length: 10 }, (_, i) => (i + 1) * 10);
+
+    const handleChange = (e) => {
+      let { name, value } = e.target;
+      if (name === "minMileage" || name === "maxMileage") {
+        value = value.replace(/[^0-9]/g, "");
+      }
+      dispatch(setFilter({ name, value }));
+    };
+
+    const handleSearch = () => {
+      onSearch();
+      dispatch(clearFilters());
+    };
   };
   return (
     <Formik

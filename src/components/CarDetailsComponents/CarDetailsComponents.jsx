@@ -5,13 +5,12 @@ import Section from "../Section/Section";
 import css from "./CarDetailsComponents.module.css";
 import clsx from "clsx";
 import Icon from "../Icon/Icon";
-// import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import BookingDate from "../Calendar/Calendar";
 const CarDetailsComponents = () => {
   const { id } = useParams();
   const cars = useSelector(selectCars);
   const car = cars.find((car) => String(car.id) === id);
-  // const [selectedDate, setSelectedDate] = useState(null);
+
   if (!car) {
     return (
       <Section>
@@ -29,9 +28,10 @@ const CarDetailsComponents = () => {
             <h3>Book your car now</h3>
             <p>Stay connected! We are always ready to help you.</p>
             <form>
-              <input type="text" placeholder="Name*" required />
+              {/* <input type="text" placeholder="Name*" required />
               <input type="email" placeholder="Email*" required />
-              <input type="data" placeholder="Booking date" required />
+              <input type="date" placeholder="Booking date" required /> */}
+              <BookingDate />
               <textarea placeholder="Comment"></textarea>
               <button type="submit">Send</button>
             </form>
@@ -78,14 +78,6 @@ const CarDetailsComponents = () => {
               <li>
                 <Icon name="Calendar" className={clsx(css.icon)} />
                 Year: {car.year};
-                {/* <DatePicker
-                  selected={selectedDate}
-                  onChange={(date) => setSelectedDate(date)}
-                  dateFormat="yyyy"
-                  showYearPicker
-                  placeholderText="Select year"
-                  className={css.dateInput}
-                /> */}
               </li>
               <li>
                 {" "}

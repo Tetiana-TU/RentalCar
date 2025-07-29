@@ -1,9 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
 .list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 32px;
+  display: flex;
+  flex-direction: column;
   row-gap: 48px;
-  list-style: none;
+}
+.item {
+  width: 100%;
+}
+.button {
+  width: 156px;
+  margin: 0 auto;
+  background-color: transparent;
+  color: var(--main);
+  border: 1px solid var(--button);
+  &:hover {
+    background-color: transparent;
+    border-color: var(--button-hover);
+  }
+}
+.loader {
   padding: 0;
-  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    gap: 64px;
+  }
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+  .item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    gap: 80px;
+  }
+  .list {
+    column-gap: 32px;
+  }
+  .item {
+    width: calc((100% - 32px * 3) / 4);
+  }
 }
