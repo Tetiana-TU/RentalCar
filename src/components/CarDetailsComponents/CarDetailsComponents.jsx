@@ -5,13 +5,13 @@ import Section from "../Section/Section";
 import css from "./CarDetailsComponents.module.css";
 import clsx from "clsx";
 import Icon from "../Icon/Icon";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 const CarDetailsComponents = () => {
   const { id } = useParams();
   const cars = useSelector(selectCars);
   const car = cars.find((car) => String(car.id) === id);
-  const [selectedDate, setSelectedDate] = useState(null);
+  // const [selectedDate, setSelectedDate] = useState(null);
   if (!car) {
     return (
       <Section>
@@ -77,8 +77,8 @@ const CarDetailsComponents = () => {
             <ul>
               <li>
                 <Icon name="Calendar" className={clsx(css.icon)} />
-                {/* Year: {car.year};
-                <DatePicker
+                Year: {car.year};
+                {/* <DatePicker
                   selected={selectedDate}
                   onChange={(date) => setSelectedDate(date)}
                   dateFormat="yyyy"
