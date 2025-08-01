@@ -4,15 +4,20 @@ import logo from "../../../public/RentalCar.svg";
 // import Container from "../Container/Container";
 // import Home from "../Hero/Hero";
 import css from "./AppBar.module.css";
+import Container from "../Container/Container";
 
 export default function AppBar() {
   return (
     <header className={css.header}>
-      <NavLink className={css.logo} to="/">
-        <img src={logo} alt="logo" />
-      </NavLink>
+      <Container>
+        <div className={css.headerContainer}>
+          <NavLink className={css.logo} to="/">
+            <img src={logo} alt="logo" />
+          </NavLink>
 
-      <Navigation />
+          <Navigation />
+        </div>
+      </Container>
     </header>
   );
 }

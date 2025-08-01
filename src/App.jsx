@@ -5,11 +5,12 @@ import { HomePage } from "./pages/HomePage";
 import { CatalogPage } from "./pages/CatalogPage";
 import { CarDetailsPage } from "./pages/CarDetailsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
-import "./App.css";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
+      <Toaster position="top-right" reverseOrder={false} />
       <AppBar />
       <Layout>
         <Routes>

@@ -1,29 +1,8 @@
-/* NORMALIZE */
 @import "modern-normalize/modern-normalize.css";
-/* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-/* VARIABLES */
-:root {
-  --main: #101828;
-  --gray: #8d929a;
-  --gray-light: #dadde1;
-  --badges: #f2f4f7;
-  --inputs: #f7f7f7;
-  --white: #fff;
-  --button: #3470ff;
-  --button-hover: #0b44cd;
-}
-
-/* GLOBAL STYLES */
 body {
   font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--main);
-  background-color: var(--white);
-  scroll-behavior: smooth;
 }
 
 *:focus-visible {

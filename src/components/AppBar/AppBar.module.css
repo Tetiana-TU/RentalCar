@@ -1,17 +1,13 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f2f4f7;
-  padding: 26px 120px;
 }
 
-/* .headerContainer {
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-} */
+}
 
-/* .logo {
+.logo {
   padding: 26px 0;
-} */
+}

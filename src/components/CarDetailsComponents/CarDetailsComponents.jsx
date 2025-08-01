@@ -5,7 +5,7 @@ import Section from "../Section/Section";
 import css from "./CarDetailsComponents.module.css";
 import clsx from "clsx";
 import Icon from "../Icon/Icon";
-import BookingDate from "../Calendar/Calendar";
+import { BookForm } from "../Form/Form";
 const CarDetailsComponents = () => {
   const { id } = useParams();
   const cars = useSelector(selectCars);
@@ -27,14 +27,7 @@ const CarDetailsComponents = () => {
           <div className={css.bookingForm}>
             <h3>Book your car now</h3>
             <p>Stay connected! We are always ready to help you.</p>
-            <form>
-              {/* <input type="text" placeholder="Name*" required />
-              <input type="email" placeholder="Email*" required />
-              <input type="date" placeholder="Booking date" required /> */}
-              <BookingDate />
-              <textarea placeholder="Comment"></textarea>
-              <button type="submit">Send</button>
-            </form>
+            <BookForm />
           </div>
         </div>
 

@@ -7,14 +7,12 @@ export const CarsList = () => {
   const cars = useSelector(selectCars);
 
   return (
-    <div className={css.wrapper}>
-      <ul className={css.list}>
-        {cars.slice(0, 12).map((car) => (
-          <li key={car.id} className={css.item}>
-            <CarCard car={car} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={css.list}>
+      {cars.map((car) => (
+        <li className={css.listItem} key={car.id}>
+          <CarCard car={car} />
+        </li>
+      ))}
+    </ul>
   );
 };

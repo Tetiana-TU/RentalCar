@@ -1,0 +1,15 @@
+.icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  fill: #f2f4f7;
+  transition: transform 250ms linear;
+}
+
+.icon:hover,
+.icon:focus {
+  transform: scale(1.2);
+}

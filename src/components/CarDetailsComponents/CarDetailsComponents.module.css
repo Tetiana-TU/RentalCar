@@ -71,14 +71,7 @@ body {
   border-radius: 8px;
   font-size: 1rem;
 }
-.datepicker {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 100%; /* якщо потрібно займати всю ширину, як інші */
-  box-sizing: border-box;
-}
+
 
 .bookingForm button {
   display: flex;

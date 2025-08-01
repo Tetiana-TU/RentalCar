@@ -1,12 +1,15 @@
 import clsx from "clsx";
 import css from "./CarCard.module.css";
 import { Link } from "react-router-dom";
+import { FavoriteIcon } from "../FavoriteIcon/FavoriteIcon";
 
 export const CarCard = ({ car }) => {
   const splitAddress = car.address.replace(/,/g, "").split(" ");
 
   return (
-    <div className={css.containerCar}>
+    <>
+      <FavoriteIcon carId={car.id} />
+
       <img className={css.img} src={car.img} />
 
       <div className={css.descWrapper}>
@@ -30,6 +33,6 @@ export const CarCard = ({ car }) => {
       <Link to={`/catalog/${car.id}`} className={css.readMore}>
         Read more
       </Link>
-    </div>
+    </>
   );
 };
