@@ -72,8 +72,7 @@ body {
   font-size: 1rem;
 }
 
-
-.bookingForm button {
+/* .bookingForm button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +87,7 @@ body {
   border-radius: 12px;
   cursor: pointer;
   margin: auto;
-}
+} */
 
 .carInfo {
   background: #fff;

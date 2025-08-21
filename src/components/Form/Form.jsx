@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { CustomDayPicker } from "../CustomDayPicker/CustomDayPicker";
 import { Button } from "../Button/Button";
-import css from "./Form.module.css";
+import styles from "./Form.module.css";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -70,41 +70,41 @@ export const BookForm = () => {
       onSubmit={handleSubmit}
     >
       {({ setFieldValue }) => (
-        <Form className={css.form}>
-          <h2 className={css.title}>Book your car now</h2>
-          <p className={css.text}>
+        <Form className={styles.form}>
+          <h2 className={styles.title}>Book your car now</h2>
+          <p className={styles.text}>
             Stay connected! We are always ready to help you.
           </p>
 
-          <div className={css.fieldWrapper}>
+          <div className={styles.fieldWrapper}>
             <Field
-              className={css.input}
+              className={styles.input}
               name="name"
               type="text"
               placeholder="Name*"
             />
             <ErrorMessage
-              className={css.errorMessages}
+              className={styles.errorMessages}
               name="name"
               component="span"
             />
           </div>
 
-          <div className={css.fieldWrapper}>
+          <div className={styles.fieldWrapper}>
             <Field
-              className={css.input}
+              className={styles.input}
               name="email"
               type="text"
               placeholder="Email*"
             />
             <ErrorMessage
-              className={css.errorMessages}
+              className={styles.errorMessages}
               name="email"
               component="span"
             />
           </div>
 
-          <div className={css.fieldWrapper}>
+          <div className={styles.fieldWrapper}>
             <CustomDayPicker
               selected={selected}
               setSelected={(date) => {
@@ -116,20 +116,20 @@ export const BookForm = () => {
               calendarRef={calendarRef}
             />
             <ErrorMessage
-              className={css.errorMessages}
+              className={styles.errorMessages}
               name="bookDate"
               component="span"
             />
           </div>
 
           <Field
-            className={clsx(css.input, css.textarea)}
+            className={clsx(styles.input, styles.textarea)}
             name="comment"
             as="textarea"
             placeholder="Comment"
           />
 
-          <div className={css.btnWrap}>
+          <div className={styles.btnWrap}>
             <Button type="submit" btnText="Send" btnSize="small" />
           </div>
         </Form>

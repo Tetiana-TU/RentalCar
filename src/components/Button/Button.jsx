@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-import css from "./Button.module.css";
+import styles from "./Button.module.css";
 
 export const Button = ({
   type = "button",
@@ -9,18 +9,22 @@ export const Button = ({
   btnSize = "small",
   onClick,
 }) => {
-  const sizeStyle = css[btnSize];
+  const sizeStyle = styles[btnSize];
 
   if (to) {
     return (
-      <Link className={clsx(css.btn, sizeStyle)} to={to}>
+      <Link className={clsx(styles.btn, sizeStyle)} to={to}>
         {btnText}
       </Link>
     );
   }
 
   return (
-    <button type={type} className={clsx(css.btn, sizeStyle)} onClick={onClick}>
+    <button
+      type={type}
+      className={clsx(styles.btn, sizeStyle)}
+      onClick={onClick}
+    >
       {btnText}
     </button>
   );

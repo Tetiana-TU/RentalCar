@@ -3,8 +3,10 @@ import { selectCars } from "../../redux/cars/selectors";
 import { CarCard } from "../CarCard/CarCard";
 import css from "./CarsList.module.css";
 
-export const CarsList = () => {
-  const cars = useSelector(selectCars);
+export const CarsList = ({ cars }) => {
+  if (!cars || cars.length === 0) {
+    return <p>No cars found</p>;
+  }
 
   return (
     <ul className={css.list}>
